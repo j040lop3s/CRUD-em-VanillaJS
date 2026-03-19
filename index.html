@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD | JavaScript Puro</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./assets/crud-puro.ico" type="image/x-icon">
+        <script src="./js/script.js" defer></script>
+    </head>
+    <body>
+        <div class="container-principal">
+
+
+            <div class="form-entrada">
+                <form class="form">
+                    <input type="text" id="input_text" class="estilo-input">
+                    <button type="button" id="button_add" class="estilo-adicionar">ADICIONAR ITEM</button>
+                </form>
+            </div>
+
+            <div class="titulo-lateral">
+                <h1>Sistema Rápido e Completo | CRUD</h1>
+            </div>
+
+            <div class="lista-itens">
+                <ul id="lista"></ul>
+            </div>
+
+            <div class="descricao">
+                <p> 
+                    Este projeto apresenta um sistema onde trabalho - em JavaScript Puro, HTML e CSS - as 
+                    operações básicas para criar, ler, atualizar e deletar informações. Tais operações 
+                    fundamentam todo o conceito tráfego de dados web através de variadas interfaces 
+                    de usuário.    
+                </p>
+
+                <p>
+                    O código cria uma array que armazena os itens adicionados, estes itens são exibidos
+                    em uma lista dinâmica juntamente com botões de remoção e atualização. Além dos métodos
+                    e propriedades comuns na criação e manipulação de elementos DOM, fiz uso de .parentElement() 
+                    que retorna o elemento pai em função do target do evento. Utilizei métodos de array como
+                    .push() para adicionar itens, .indexOf() para localizar o índice de um item específico 
+                    e .splice() para remover um item da array.
+                </p>
+
+                <span>Criado por <a href="https://github.com/j040lop3s">j040 L0p3s</a></span>
+            </div>
+        </div>
+    </body>
+</html>

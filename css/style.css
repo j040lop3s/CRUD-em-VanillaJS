@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    background-color: #A7C6DA;
+    background-image: 
+        linear-gradient(rgba(158, 178, 93, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(158, 178, 93, 0.2) 1px, transparent 1px);
+    background-size: 30px 30px;
+    
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 4vh 5vw;
+}
+
+.container-principal {
+    background-color: #EEFCCE;
+    border: 4px solid #9EB25D;
+    box-shadow: 16px 16px 0px #F1DB4B;
+    padding: 40px;
+    max-width: 1100px;
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    position: relative;
+}
+
+.container-principal::before {
+    content: "SYS.CRUD // V1.0";
+    position: absolute;
+    top: -16px;
+    left: -4px;
+    background: #9EB25D;
+    color: #EEFCCE;
+    padding: 4px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+.titulo-lateral h1 {
+    font-size: 2.8rem;
+    color: #9EB25D;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 0px #EDFF71;
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.descricao p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-left: 4px solid #F1DB4B;
+    padding-left: 15px;
+    background: rgba(167, 198, 218, 0.2);
+    padding: 10px 10px 10px 15px;
+}
+
+.descricao span {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #9EB25D;
+}
+
+.descricao a {
+    color: #EEFCCE;
+    background-color: #9EB25D;
+    padding: 2px 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.descricao a:hover {
+    background-color: #F1DB4B;
+    color: #9EB25D;
+}
+
+.form-entrada {
+    margin-bottom: 30px;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+    background: #A7C6DA;
+    padding: 10px;
+    border: 3px solid #9EB25D;
+}
+
+.estilo-input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: #EEFCCE;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #9EB25D;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.estilo-input:focus {
+    border-bottom: 3px solid #F1DB4B;
+}
+
+.estilo-input::placeholder {
+    color: #9eb25d88;
+}
+
+.estilo-adicionar {
+    background: #9EB25D;
+    color: #EEFCCE;
+    border: none;
+    padding: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.estilo-adicionar:hover {
+    background: #EDFF71;
+    color: #9EB25D;
+}
+
+.lista-itens {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.lista-itens::-webkit-scrollbar {
+    width: 8px;
+}
+.lista-itens::-webkit-scrollbar-track {
+    background: #EEFCCE; 
+    border: 1px solid #9EB25D;
+}
+.lista-itens::-webkit-scrollbar-thumb {
+    background: #9EB25D; 
+}
+
+#lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#lista li {
+    background: #EEFCCE;
+    border: 2px dashed #9EB25D;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #9EB25D;
+    box-shadow: 4px 4px 0px #A7C6DA;
+    transition: transform 0.2s, box-shadow 0.2s;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#lista li:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px #F1DB4B;
+}
+
+#lista li button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #9EB25D;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+#lista li button:nth-of-type(1) {
+    background: transparent;
+    color: #9EB25D;
+    margin-left: auto;
+}
+
+#lista li button:nth-of-type(1):hover {
+    background: #9EB25D;
+    color: #EEFCCE;
+}
+
+#lista li button:nth-of-type(2) {
+    background: #F1DB4B;
+    color: #9EB25D;
+    border-color: #F1DB4B;
+}
+
+#lista li button:nth-of-type(2):hover {
+    background: #EDFF71;
+}
+
+@media (max-width: 900px) {
+    .container-principal {
+        grid-template-columns: 1fr;
+        box-shadow: 8px 8px 0px #F1DB4B;
+        padding: 25px;
+        gap: 30px;
+    }
+
+    .titulo-lateral h1 {
+        font-size: 2.2rem;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .estilo-adicionar {
+        padding: 15px;
+    }
+
+    #lista li {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    #lista li button:nth-of-type(1) {
+        margin-left: 0;
+    }
+}
